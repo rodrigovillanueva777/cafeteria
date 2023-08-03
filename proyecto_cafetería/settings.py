@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cafeteria',
     'rest_framework',
+    'djongo',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,14 @@ WSGI_APPLICATION = 'proyecto_cafetería.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'cafeteriadb',
+        'HOST': 'mongodb://localhost:27017/',
+        'PORT': 27017,
+        'ENFORCE_SCHEMA': False,
+        'USERNAME': 'admin',
+        'PASSWORD': 'admin',
+        'AUTH_MECHANISM': 'SCRAM-SHA-256',
     }
 }
 
