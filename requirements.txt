@@ -1,0 +1,12 @@
+Django
+pytz
+djongo
+pymongo
+dnspython
+djangorestframework
+asgiref
+autopep8
+pycodestyle
+tzdata
+djangorestframework-simplejwt
+django-cors-headers
